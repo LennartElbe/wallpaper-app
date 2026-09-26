@@ -13,8 +13,10 @@
     <key>RunAtLoad</key>
     <true/>
 
-    <key>StartInterval</key>
-    <integer>__INTERVAL_SECONDS__</integer>
+    <key>StartCalendarInterval</key>
+    <array>
+__CALENDAR_ENTRIES__
+    </array>
 
     <key>StandardOutPath</key>
     <string>__LOG_DIR__/launchd.out.log</string>

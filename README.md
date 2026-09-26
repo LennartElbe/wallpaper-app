@@ -50,13 +50,21 @@ the generated image and log at
 
 ## Install as a background job
 
-Runs automatically on login and on a timer (default every 30 minutes) via a
-launchd user agent:
+Runs automatically on login and at fixed clock marks (default every 30
+minutes, i.e. `:00`/`:30`) via a launchd user agent:
 
 ```bash
 ./scripts/install-launchd.sh          # every 30 minutes (default)
-./scripts/install-launchd.sh 900      # or pass a custom interval, in seconds
+./scripts/install-launchd.sh 15       # or pass a custom interval, in minutes (must evenly divide 60)
 ```
+
+This uses `StartCalendarInterval` (cron-like fixed clock marks) rather than
+`StartInterval` (a rolling "N seconds since last run" timer). `StartInterval`
+turned out to be unreliable across sleep on this machine: its kqueue-based
+timer sometimes fails to re-arm after the Mac sleeps through a scheduled
+firing, so the job would run once on wake and then silently never fire again
+until the next login. `StartCalendarInterval` is clock-based, like cron, and
+macOS reliably fires any missed marks as soon as the system wakes.
 
 To remove it:
 
