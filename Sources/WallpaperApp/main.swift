@@ -40,8 +40,9 @@ guard let cgImage = renderer.render() else {
 }
 
 do {
-    try DesktopWallpaper.savePNG(cgImage, to: Config.wallpaperURL)
-    try DesktopWallpaper.apply(imageURL: Config.wallpaperURL)
+    let wallpaperURL = Config.nextWallpaperURL()
+    try DesktopWallpaper.savePNG(cgImage, to: wallpaperURL)
+    try DesktopWallpaper.apply(imageURL: wallpaperURL)
 
     let weatherDesc = weather.map { "\($0.mood.rawValue), \(Int($0.temperatureC))°C" } ?? "no location configured"
     let batteryDesc = "\(Int(battery.percentage * 100))%\(battery.isCharging ? " (charging)" : "")"

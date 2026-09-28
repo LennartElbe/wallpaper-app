@@ -22,7 +22,8 @@ enum Palette {
                 NSColor(calibratedRed: 0.20, green: 0.22, blue: 0.45, alpha: 1),
                 NSColor(calibratedRed: 0.35, green: 0.30, blue: 0.55, alpha: 1),
                 NSColor(calibratedRed: 0.12, green: 0.15, blue: 0.30, alpha: 1),
-                NSColor(calibratedRed: 0.55, green: 0.50, blue: 0.75, alpha: 1)
+                NSColor(calibratedRed: 0.55, green: 0.50, blue: 0.75, alpha: 1),
+                NSColor(calibratedRed: 0.45, green: 0.22, blue: 0.65, alpha: 1)
             ]
         )),
         (5, PhasePalette( // pre-dawn, coldest
@@ -32,7 +33,8 @@ enum Palette {
                 NSColor(calibratedRed: 0.18, green: 0.24, blue: 0.50, alpha: 1),
                 NSColor(calibratedRed: 0.30, green: 0.35, blue: 0.60, alpha: 1),
                 NSColor(calibratedRed: 0.10, green: 0.16, blue: 0.34, alpha: 1),
-                NSColor(calibratedRed: 0.45, green: 0.48, blue: 0.70, alpha: 1)
+                NSColor(calibratedRed: 0.45, green: 0.48, blue: 0.70, alpha: 1),
+                NSColor(calibratedRed: 0.40, green: 0.20, blue: 0.62, alpha: 1)
             ]
         )),
         (7.5, PhasePalette( // sunrise
@@ -42,7 +44,8 @@ enum Palette {
                 NSColor(calibratedRed: 0.95, green: 0.65, blue: 0.45, alpha: 1),
                 NSColor(calibratedRed: 0.85, green: 0.45, blue: 0.55, alpha: 1),
                 NSColor(calibratedRed: 0.55, green: 0.35, blue: 0.60, alpha: 1),
-                NSColor(calibratedRed: 0.98, green: 0.80, blue: 0.60, alpha: 1)
+                NSColor(calibratedRed: 0.98, green: 0.80, blue: 0.60, alpha: 1),
+                NSColor(calibratedRed: 0.60, green: 0.30, blue: 0.70, alpha: 1)
             ]
         )),
         (11, PhasePalette( // late morning, bright neutral-cool
@@ -52,7 +55,8 @@ enum Palette {
                 NSColor(calibratedRed: 0.98, green: 0.98, blue: 0.92, alpha: 1),
                 NSColor(calibratedRed: 0.55, green: 0.75, blue: 0.95, alpha: 1),
                 NSColor(calibratedRed: 0.20, green: 0.45, blue: 0.75, alpha: 1),
-                NSColor(calibratedRed: 0.90, green: 0.70, blue: 0.55, alpha: 1)
+                NSColor(calibratedRed: 0.90, green: 0.70, blue: 0.55, alpha: 1),
+                NSColor(calibratedRed: 0.60, green: 0.48, blue: 0.85, alpha: 1)
             ]
         )),
         (15, PhasePalette( // early afternoon, peak brightness
@@ -62,7 +66,8 @@ enum Palette {
                 NSColor(calibratedRed: 1.00, green: 0.95, blue: 0.80, alpha: 1),
                 NSColor(calibratedRed: 0.50, green: 0.78, blue: 0.92, alpha: 1),
                 NSColor(calibratedRed: 0.95, green: 0.60, blue: 0.35, alpha: 1),
-                NSColor(calibratedRed: 0.20, green: 0.40, blue: 0.70, alpha: 1)
+                NSColor(calibratedRed: 0.20, green: 0.40, blue: 0.70, alpha: 1),
+                NSColor(calibratedRed: 0.55, green: 0.35, blue: 0.80, alpha: 1)
             ]
         )),
         (17.5, PhasePalette( // golden hour
@@ -72,7 +77,8 @@ enum Palette {
                 NSColor(calibratedRed: 1.00, green: 0.75, blue: 0.30, alpha: 1),
                 NSColor(calibratedRed: 0.95, green: 0.45, blue: 0.35, alpha: 1),
                 NSColor(calibratedRed: 0.65, green: 0.35, blue: 0.55, alpha: 1),
-                NSColor(calibratedRed: 1.00, green: 0.90, blue: 0.60, alpha: 1)
+                NSColor(calibratedRed: 1.00, green: 0.90, blue: 0.60, alpha: 1),
+                NSColor(calibratedRed: 0.50, green: 0.25, blue: 0.68, alpha: 1)
             ]
         )),
         (19.5, PhasePalette( // sunset peak
@@ -82,7 +88,8 @@ enum Palette {
                 NSColor(calibratedRed: 1.00, green: 0.55, blue: 0.25, alpha: 1),
                 NSColor(calibratedRed: 0.95, green: 0.30, blue: 0.35, alpha: 1),
                 NSColor(calibratedRed: 0.55, green: 0.20, blue: 0.45, alpha: 1),
-                NSColor(calibratedRed: 1.00, green: 0.80, blue: 0.45, alpha: 1)
+                NSColor(calibratedRed: 1.00, green: 0.80, blue: 0.45, alpha: 1),
+                NSColor(calibratedRed: 0.45, green: 0.18, blue: 0.62, alpha: 1)
             ]
         )),
         (21.5, PhasePalette( // dusk, cooling fast
@@ -92,7 +99,8 @@ enum Palette {
                 NSColor(calibratedRed: 0.55, green: 0.25, blue: 0.50, alpha: 1),
                 NSColor(calibratedRed: 0.35, green: 0.20, blue: 0.55, alpha: 1),
                 NSColor(calibratedRed: 0.20, green: 0.15, blue: 0.40, alpha: 1),
-                NSColor(calibratedRed: 0.70, green: 0.40, blue: 0.55, alpha: 1)
+                NSColor(calibratedRed: 0.70, green: 0.40, blue: 0.55, alpha: 1),
+                NSColor(calibratedRed: 0.50, green: 0.24, blue: 0.68, alpha: 1)
             ]
         ))
     ]

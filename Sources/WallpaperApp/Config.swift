@@ -10,8 +10,19 @@ struct Config: Codable {
     }()
 
     static let fileURL = directory.appendingPathComponent("config.json")
-    static let wallpaperURL = directory.appendingPathComponent("wallpaper.png")
     static let logURL = directory.appendingPathComponent("wallpaper-app.log")
+    private static let variantStateURL = directory.appendingPathComponent(".last-variant")
+
+    /// macOS caches the desktop picture by file URL: overwriting the same
+    /// path in place doesn't reliably trigger a redraw, even though the
+    /// bytes on disk changed. Alternating between two filenames each run
+    /// forces the OS to treat every update as a genuinely new picture.
+    static func nextWallpaperURL() -> URL {
+        let lastVariant = (try? String(contentsOf: variantStateURL, encoding: .utf8)) ?? "2"
+        let nextVariant = lastVariant.trimmingCharacters(in: .whitespacesAndNewlines) == "1" ? "2" : "1"
+        try? nextVariant.write(to: variantStateURL, atomically: true, encoding: .utf8)
+        return directory.appendingPathComponent("wallpaper-\(nextVariant).png")
+    }
 
     static func load() -> Config {
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
