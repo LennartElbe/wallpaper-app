@@ -31,8 +31,8 @@ Edit it and add your coordinates to enable weather:
 
 ```json
 {
-  "latitude": 52.52,
-  "longitude": 13.405
+  "latitude": 60.52,
+  "longitude": 5.405
 }
 ```
 
